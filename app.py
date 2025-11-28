@@ -22,20 +22,20 @@ pickup_datetime = datetime.datetime.combine(date, time).strftime("%Y-%m-%d %H:%M
 
 st.markdown('''### Fill the pickup coordinates :''')
 
-pickup_longitude = st.number_input('Pickup Longitude :')
-pickup_latitude = st.number_input('Pickup Latitude :')
+pickup_longitude = st.number_input('Pickup Longitude [-74.3 to -73.7] :')
+pickup_latitude = st.number_input('Pickup Latitude [40.5 to 40.9] :')
 
 st.write('The coordinates are ', pickup_longitude, pickup_latitude)
 
 st.markdown('''### Fill the dropoff coordinates :''')
 
-dropoff_longitude = st.number_input('Dropoff Longitude :')
-dropoff_latitude = st.number_input('Dropoff Latitude :')
+dropoff_longitude = st.number_input('Dropoff Longitude [-74.3 to -73.7] :')
+dropoff_latitude = st.number_input('Dropoff Latitude [40.5 to 40.9] :')
 st.write('The coordinates are ', dropoff_longitude, dropoff_latitude)
 
 st.markdown('''### Fill the passenger count :''')
 
-passenger_count = st.number_input('Number of passenger :')
+passenger_count = st.number_input('Number of passenger (0-8) :')
 st.write('The number of passenger is ', passenger_count)
 
 

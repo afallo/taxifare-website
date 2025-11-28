@@ -1,6 +1,7 @@
 import streamlit as st
 import datetime
 import requests
+import pandas as pd
 
 
 
@@ -38,6 +39,16 @@ st.markdown('''### Fill the passenger count :''')
 passenger_count = st.number_input('Number of passenger [0 to 8] :')
 st.write('The number of passenger is ', passenger_count)
 
+def get_map_data():
+
+    return pd.DataFrame(
+             [[pickup_latitude, pickup_longitude], [dropoff_latitude, dropoff_longitude]],
+            columns=['lat', 'lon']
+        )
+
+df = get_map_data()
+
+st.map(df)
 
 url = 'https://taxifare-1042182811091.europe-west1.run.app/predict'
 

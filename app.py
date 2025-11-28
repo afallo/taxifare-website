@@ -73,6 +73,6 @@ if st.button("Amount prediction"):
        # st.success("Request sent successfully!")
        # st.write("Response Status Code:", response.status_code)
        # st.write(response.text)
-        st.write("Fare amount :",response.json()['fare']) # Display JSON response
+        st.write("Fare amount :",str(response.json()['fare']), "$") # Display JSON response
     except Exception as e:
        st.error(f"An error occurred: {e}")

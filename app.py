@@ -35,7 +35,7 @@ st.write('The coordinates are ', dropoff_longitude, dropoff_latitude)
 
 st.markdown('''### Fill the passenger count :''')
 
-passenger_count = st.number_input('Number of passenger (0-8) :')
+passenger_count = st.number_input('Number of passenger [0 to 8] :')
 st.write('The number of passenger is ', passenger_count)
 
 

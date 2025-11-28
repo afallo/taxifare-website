@@ -70,8 +70,8 @@ if st.button("Amount prediction"):
     # Sending POST request
         response = requests.get(url, params=data)
         #st.write(response.url)
-        st.success("Request sent successfully!")
-        st.write("Response Status Code:", response.status_code)
+       # st.success("Request sent successfully!")
+       # st.write("Response Status Code:", response.status_code)
        # st.write(response.text)
         st.write("Fare amount :",response.json()['fare']) # Display JSON response
     except Exception as e:
